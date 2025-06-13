@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Plus,StickyNote} from 'lucide-react'
 import Notes from './components/Notes';
+import Not from './components/Not';
 
 const App = () => {
 
@@ -54,8 +55,11 @@ const App = () => {
             {notes.map((note)=>(
               <Notes id={note.id} note={note.title} key={note.id} deleteNote ={deleteNote}/>
             ) )}
+          
           </div>
         ):<h1>No Notes Are Available.</h1>}
+        
+        <Not/>
       </div>
        </div>
        
